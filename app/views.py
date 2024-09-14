@@ -43,9 +43,7 @@ def workdir_view(request):
             continue
         level = root.replace(startpath, '').count(os.sep)
         indent = ' ' * 4 * level
-        # dir_tree += f'<p style="text-indent: {5 * len(indent)}px;">{os.path.basename(root)}/</p>'
         dir_tree += f'{indent}{os.path.basename(root)}/\n'
-
 
         subindent = ' ' * 4 * (level + 1)
         for f in files:
